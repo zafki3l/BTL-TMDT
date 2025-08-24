@@ -14,6 +14,13 @@
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
+                    <th>Author</th>
+                    <th>Publisher</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Status</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -28,6 +35,10 @@
                         <td>{{ $book->price }}</td>
                         <td>{{ $book->quantity }}</td>
                         <td>{{ $book->status }}</td>
+                        <td>
+                            <a href="{{ route('staff.editBook', ['id' => $book->id]) }}">Edit</a>
+                            <a href="{{ route('staff.deleteBook', ['id' => $book->id]) }}">Delete</a>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

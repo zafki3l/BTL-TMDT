@@ -34,7 +34,7 @@
             <input type="text" name="quantity" class="form-control" required>
         </div>
 
-        <button type="submit">Lưu</button>
-        <a href="{{ route('staff.indexBook') }}">Hủy</a>
+        <button type="submit">Confirm</button>
+        <a href="{{ route('staff.indexBook') }}">Cancel</a>
     </form>
 @endsection
