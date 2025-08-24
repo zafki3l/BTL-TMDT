@@ -27,9 +27,11 @@
                     <td>
                         <a href="{{ route('staff.editOrder', ['id' => $order->id]) }}">Edit</a>
                         <a href="{{ route('staff.deleteOrder', ['id' => $order->id]) }}">Delete</a>
+                        <a href="{{ route('staff.indexOrderDetails') }}">View Details</a>
                     </td>
                 </tr>
             @endforeach
         </tbody>
     </table>
+    <a href="{{ route('staff.dashboard') }}"></a>
 @endsection

@@ -43,5 +43,6 @@
                 @endforeach
             </tbody>
         </table>
+        <a href="{{ route('staff.dashboard') }}">Cancel</a>
     @endif
 @endsection

@@ -3,6 +3,7 @@
 @section('content')
     <h1 class="mb-4">Edit order</h1>
     <form action="{{ route('staff.updateOrder', ['id' => $order->id]) }}" method="post">
+
         @csrf
         @method('PUT')
         <div class="mb-3">

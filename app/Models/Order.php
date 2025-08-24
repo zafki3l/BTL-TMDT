@@ -18,7 +18,7 @@ class Order extends Model
     // 1 order có nhiều order_detail
     public function orderDetails()
     {
-        return $this->hasMany(Order_Detail::class);
+        return $this->hasMany(OrderDetail::class);
     }
 
     // 1 order thuộc về 1 user
