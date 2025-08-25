@@ -12,6 +12,7 @@
     <div class="header">
         <ul type="none" class="nav-menu">
             <div class="nav-left">
+                <li><a href="{{ route('index') }}">Homepage</a></li>
                 <li><a href="{{ url('/category') }}">Books Category</a> </li>
                 <li><a href="{{ url('/sales') }}">On Sales</a></li>
                 <li><a href="{{ url('/new') }}">New Books</a></li>
@@ -33,7 +34,7 @@
                 <input type="text" placeholder="Search books..." />
                 <button type="submit"><i class='bx bx-search'></i></button>
             </div>
-            <li><a href="{{ url('/cart') }}">Add To Cart</a></li>
+            <li><a href="{{ route('carts.indexCart') }}">Add To Cart</a></li>
         </ul>
     </div>
 

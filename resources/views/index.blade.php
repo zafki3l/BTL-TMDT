@@ -23,7 +23,9 @@
                         <p class="book-author">{{ $book->author }}</p>
                         <p class="book-price">{{ number_format($book->price, 0, ',', '.') }}đ</p>
                         <a href="{{ route('books.bookDetail', ['id' => $book->id]) }}" class="btn-view-detail">View Details</a>
-                        <button class="btn-add-to-cart">Add to Cart</button>
+                        <button class="btn-add-to-cart">
+                            <a href="{{ route('carts.addCart', $book->id) }}">Add to Cart</a>
+                        </button>
                     </div>
                 @endforeach
             </div>

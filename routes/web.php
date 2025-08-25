@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -9,7 +10,7 @@ use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\PostController;
 
 //Đường dẫn gốc
-Route::get('/', [HomeController::class,'index'])->name('homepage');
+Route::get('/', [HomeController::class,'index'])->name('index');
 
 Route::prefix('posts')->controller(PostController::class)
 ->name('posts.')
@@ -51,4 +52,10 @@ Route::post('/forgotPassword', [AuthController::class, 'postForgotPassword'])->n
 
 Route::prefix('books')->controller(BookController::class)->name('books.')->group(function () {
     Route::get('bookDetail/{id}', [BookController::class, 'bookDetail'])->name('bookDetail');
+});
+
+Route::prefix('carts')->controller(CartController::class)->name('carts.')->group(function () {
+    Route::get('/', [CartController::class, 'indexCart'])->name('indexCart');
+    Route::get('/addCart/{bookId}', [CartController::class, 'addCart'])->name('addCart');
+    Route::delete('/remove/{itemId}', [CartController::class, 'removeCart'])->name('removeCart');
 });
