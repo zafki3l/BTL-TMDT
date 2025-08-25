@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.backend')
 
 @section('content')
     <h1 class="mb-4">Báo cáo doanh số bán hàng</h1>

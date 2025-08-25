@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.backend')
 
 @section('content')
     <h2>Edit user's role</h2>

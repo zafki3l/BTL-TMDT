@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -8,10 +9,7 @@ use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\PostController;
 
 //Đường dẫn gốc
-Route::get('/', [
-    HomeController::class,
-    'index'
-]);
+Route::get('/', [HomeController::class,'index'])->name('homepage');
 
 Route::prefix('posts')->controller(PostController::class)
 ->name('posts.')
@@ -49,3 +47,8 @@ Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 //Đổi/Quên mật khẩu
 Route::get('forgotPassword', [AuthController::class, 'forgotPassword'])->name('forgotPassword');
 Route::post('/forgotPassword', [AuthController::class, 'postForgotPassword'])->name('postForgotPassword');
+
+
+Route::prefix('books')->controller(BookController::class)->name('books.')->group(function () {
+    Route::get('bookDetail/{id}', [BookController::class, 'bookDetail'])->name('bookDetail');
+});

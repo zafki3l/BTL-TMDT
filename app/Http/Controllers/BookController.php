@@ -74,4 +74,11 @@ class BookController extends Controller
 
         return redirect()->route('staff.indexBook')->with('message', 'Delete book succesfully');
     }
+
+    public function bookDetail($id)
+    {
+        $book = Book::findOrFail($id);
+
+        return view('books.bookDetail', compact('book'));
+    }
 }

@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.backend')
 
 @section('content')
 <div class="container">
-    <h1>Đăng ký tài khoản</h1>
+    <h1>Register</h1>
 
     @if(session('message'))
     <div>
@@ -13,7 +13,7 @@
         @csrf
 
         <div>
-            <label for="name">Họ và tên:</label><br>
+            <label for="name">Username:</label><br>
             <input type="text" id="name" name="name" value="{{ old('name') }}" required>
         </div>
 
@@ -23,23 +23,23 @@
         </div>
 
         <div>
-            <label for="password">Mật khẩu:</label><br>
+            <label for="password">Password:</label><br>
             <input type="password" id="password" name="password" required>
         </div>
 
         <div>
-            <label for="password_confirmation">Nhập lại mật khẩu:</label><br>
+            <label for="password_confirmation">Password confirmation:</label><br>
             <input type="password" id="password_confirmation" name="password_confirmation" required>
         </div>
 
         <div>
-            <button type="submit">Đăng ký</button>
+            <button type="submit">Register</button>
         </div>
     </form>
 
     <p>
         Đã có tài khoản?
-        <a href="{{ route('login') }}">Đăng nhập</a>
+        <a href="{{ route('login') }}">Login</a>
     </p>
 </div>
 @endsection

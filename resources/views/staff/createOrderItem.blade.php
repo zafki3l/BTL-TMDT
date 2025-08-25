@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.backend')
 
 @section('content')
     <h1 class="mb-4">Create new order item</h1>
-    <form action="{{ route('staff.storeOrderItem')}}" method="post">
+    <form action="{{ route('staff.storeOrderItem') }}" method="post">
         @csrf
         <div class="mb-3">
             <label class="form-label">Order_ID: </label>

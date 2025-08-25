@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.backend')
 
 @section('content')
     <h2>📚 Order list</h2>
@@ -33,5 +33,5 @@
             @endforeach
         </tbody>
     </table>
-    <a href="{{ route('staff.dashboard') }}"></a>
+    <a href="{{ route('staff.dashboard') }}">Cancel</a>
 @endsection
