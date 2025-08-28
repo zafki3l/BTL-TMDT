@@ -6,7 +6,7 @@
 
 @section('content')
 <head>
-    <link rel="stylesheet" href="{{ asset('css\bookDetai.css') }}">
+    <link rel="stylesheet" href="{{ asset('css\bookDetail.css') }}">
 </head>
 <main class="book-detail-main">
     <div class="book-detail-container">

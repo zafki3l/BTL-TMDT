@@ -2,7 +2,6 @@
 
 /* Reset cơ bản */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -32,7 +31,7 @@ main {
 
 .book-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Tự động chia cột linh hoạt */
+    grid-template-columns: repeat(5, minmax(200px, 1fr)); /* Tự động chia cột linh hoạt */
     gap: 1.5rem; /* Khoảng cách giữa các item */
     justify-content: center; /* Căn giữa các item nếu không đủ lấp đầy hàng */
 }

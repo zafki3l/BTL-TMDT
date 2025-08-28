@@ -28,9 +28,9 @@ Route::middleware('auth', 'staff')->prefix('staff')->name('staff.')->group(funct
     Route::get('/order/{id}/deleteOrder/', [OrderController::class, 'deleteOrder'])->name('deleteOrder');
 
     //CRUD ORDER_DETAILS
-    Route::get('/indexOrderDetails', [OrderDetailController::class, 'indexOrderDetails'])->name('indexOrderDetails');
-    Route::get('indexOrderDetails/createOrderItem', [OrderDetailController::class, 'createOrderItem'])->name('createOrderItem');
-    Route::post('/', [OrderDetailController::class, 'storeOrderItem'])->name('storeOrderItem');
+    Route::get('/indexOrderDetails/{id}', [OrderDetailController::class, 'indexOrderDetails'])->name('indexOrderDetails');
+    Route::get('/indexOrderDetails/{order_id}/createOrderItem', [OrderDetailController::class, 'createOrderItem'])->name('createOrderItem');
+    Route::post('/indexOrderDetails/{order_id}', [OrderDetailController::class, 'storeOrderItem'])->name('storeOrderItem');
     Route::get('orderItem/{id}', [OrderDetailController::class, 'editOrderItem'])->name('editOrderItem');
     Route::put('/orderItem/{id}', [OrderDetailController::class, 'updateOrderItem'])->name('updateOrderItem');
     Route::get('/orderItem/{id}/deleteOrderItem/', [OrderDetailController::class, 'deleteOrderItem'])->name('deleteOrderItem');

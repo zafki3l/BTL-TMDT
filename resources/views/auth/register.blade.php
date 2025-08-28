@@ -1,8 +1,13 @@
 @extends('layouts.backend')
 
 @section('content')
-<div class="container">
-    <h1>Register</h1>
+<div class="login-container">
+
+    <head>
+        <link rel="stylesheet" href="css/register.css">
+    </head>
+
+    <h2>REGISTER</h2>
 
     @if(session('message'))
     <div>
@@ -14,22 +19,22 @@
 
         <div>
             <label for="name">Username:</label><br>
-            <input type="text" id="name" name="name" value="{{ old('name') }}" required>
+            <input type="text" id="name" name="name" value="{{ old('name') }}" placeholder="Username" required>
         </div>
 
         <div>
             <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" value="{{ old('email') }}" required>
+            <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="Email" required>
         </div>
 
         <div>
             <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
         </div>
 
         <div>
             <label for="password_confirmation">Password confirmation:</label><br>
-            <input type="password" id="password_confirmation" name="password_confirmation" required>
+            <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Confirm your password" required>
         </div>
 
         <div>
@@ -38,7 +43,7 @@
     </form>
 
     <p>
-        Đã có tài khoản?
+        Already have an account?
         <a href="{{ route('login') }}">Login</a>
     </p>
 </div>

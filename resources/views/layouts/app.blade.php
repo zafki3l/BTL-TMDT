@@ -31,10 +31,11 @@
         
         <ul type="none" class="user-menu">
             <div class="search-bar">
-                <input type="text" placeholder="Search books..." />
-                <button type="submit"><i class='bx bx-search'></i></button>
+                <form action="{{ route('findBook') }}" method="get">
+                    <input type="text" name="name" placeholder="Search books..." value="{{ request('name') }}"/>
+                </form>
             </div>
-            <li><a href="{{ route('carts.indexCart') }}">Add To Cart</a></li>
+            <li><a href="{{ route('carts.indexCart') }}">Cart</a></li>
         </ul>
     </div>
 
@@ -65,12 +66,6 @@
                     <li>Check out</li>
                     <li>Shipping and return policy</li>
                     <li>Terms of service</li>
-                    <li>Chính sách thanh toán</li>
-                    <li>Chính sách khiếu nại</li>
-                    <li>Chính sách vận chuyển</li>
-                    <li>Chính sách bảo hành</li>
-                    <li>Chính sách kiểm hàng</li>
-                    <li>Chính sách bảo mật</li>
                 </ul>
             </li>
 
@@ -81,7 +76,7 @@
                     <li>CÔNG TY TRÁCH NHIỆM HỮU HẠN</li>
                     <li>CHIM VẶN DÂY CÓT</li>
                     <li>Email: Th41299292@fake.email.com</li>
-                    <li>Địa chỉ: Phố 123, số 321 Hà Nội</li>
+                    <li>Address: Phố 123, số 321 Hà Nội</li>
                     <li>Hoàn Kiếm, Hà Nội</li>
                 </ul>
             </li>

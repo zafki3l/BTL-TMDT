@@ -59,3 +59,6 @@ Route::prefix('carts')->controller(CartController::class)->name('carts.')->group
     Route::get('/addCart/{bookId}', [CartController::class, 'addCart'])->name('addCart');
     Route::delete('/remove/{itemId}', [CartController::class, 'removeCart'])->name('removeCart');
 });
+
+//Tìm kiếm sách
+Route::get('/find', [HomeController::class, 'findBook'])->name('findBook');
